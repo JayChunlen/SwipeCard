@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LTRecommendDetailVC">
+            <connections>
+                <outlet property="tableView" destination="v7Q-m5-93Z" id="a9y-qU-eJ6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="推荐关注" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XVS-Jd-7MI">
+                    <rect key="frame" x="250" y="22" width="100" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="27u-gg-ytL"/>
+                        <constraint firstAttribute="width" constant="100" id="fOe-nV-M6O"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v7Q-m5-93Z">
+                    <rect key="frame" x="20" y="64" width="560" height="516"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="TAD-rm-B4g"/>
+                        <outlet property="delegate" destination="-1" id="4Ol-XJ-RBa"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-e4-PHi">
+                    <rect key="frame" x="10" y="22" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Wtz-Jc-DPa"/>
+                        <constraint firstAttribute="width" constant="40" id="czA-hO-4cy"/>
+                    </constraints>
+                    <state key="normal" image="tab_button_back"/>
+                    <connections>
+                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="qqe-Wm-F5V"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="v7Q-m5-93Z" firstAttribute="top" secondItem="XVS-Jd-7MI" secondAttribute="bottom" constant="2" id="AgM-zl-Hh0"/>
+                <constraint firstItem="v7Q-m5-93Z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="BaZ-0X-IVt"/>
+                <constraint firstItem="XVS-Jd-7MI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="CLr-gp-CIQ"/>
+                <constraint firstAttribute="trailing" secondItem="v7Q-m5-93Z" secondAttribute="trailing" constant="20" id="KrC-OH-PEJ"/>
+                <constraint firstAttribute="bottom" secondItem="v7Q-m5-93Z" secondAttribute="bottom" constant="20" id="WP9-sX-twp"/>
+                <constraint firstItem="XVS-Jd-7MI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kdy-Ax-tXs"/>
+                <constraint firstItem="yKK-e4-PHi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="uYi-6o-ovK"/>
+                <constraint firstItem="yKK-e4-PHi" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="yP1-pN-1dO"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="tab_button_back" width="20" height="20"/>
+    </resources>
+</document>
